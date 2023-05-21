@@ -1,5 +1,3 @@
-# Earth Day PC Setup
-
 ## Two Screens Synced
 
 1. Open your video file in your preferred media player.
@@ -8,7 +6,7 @@
     ```markdown
     **SHIFT-Space: Toggle edit mode**
     In Edit Mode
-    **'s':                Solo/unsolo selected &hide buttons
+    **'s':                Show/Hide controls/buttons Solo/unsolo selected
     'p':                play/pause
     click / drag:       select and move quads/corner points**
     SHIFT + drag:       move selcted quad/corner point with 10x precision
@@ -39,7 +37,7 @@
     ```markdown
     **SHIFT-Space: Toggle edit mode**
     In Edit Mode
-    **'s':                Solo/unsolo selected &hide buttons
+    **'s':                Show/Hide controls/buttons Solo/unsolo selected
     'p':                play/pause
     click / drag:       select and move quads/corner points**
     SHIFT + drag:       move selcted quad/corner point with 10x precision
