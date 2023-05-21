@@ -1,0 +1,186 @@
+<html>
+
+<head>
+<style>
+
+body{
+	margin:0;
+	padding:0;
+	background:black;
+	color:white;
+}
+
+</style>
+</head>
+
+<body>
+	<!-- <pre  tabindex=1 onkeydown="if (event.code === 'KeyI') { this.style.display = 'none'; }">Press 'i' to hide me</pre> -->
+	<form tabindex=0>
+		<input type="file" id="file-input">
+	  </form>
+  <button id="switchButton" onclick="switchVideo()">Select Input</button>
+
+	  
+
+  <div id="pauseLabel" class="pause-label" style="display: none;">Video Paused</div>
+
+	<pre tabindex=0 id="controls"  style="width:600px; height:250px; background:#404040;">
+SHIFT-Space: Toggle edit mode
+In Edit Mode
+'p':                play/pause 
+'i':                HIDE ME
+click / drag:       select and move quads/corner points
+SHIFT + drag:       move selcted quad/corner point with 10x precision
+ALT + drag:         rotate/scale selected quad
+Arrow keys:         move selected quad/corner point
+SHIFT + Arrow keys: move selected quad/corner point by 10 pixels
+ALT + Arrow keys:   rotate/scale selected 
+'s':                Solo/unsolo selected 
+'c':                Toggle crosshairs
+'r':                Rotate selected 90 degrees clock-wise
+'h':                Flip selected horizontally
+'v':                Flip selected vertically
+'b':                Show/Hide bounds
+	</pre>
+  <!-- <video  muted autoplay width="500" muted height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video-test1"></video> -->
+
+	<video  width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="master"></video>
+
+	<script src="maptastic.min.js">
+
+  </script>
+	<script>
+		Maptastic("master");
+		Maptastic("controls");
+
+	</script>
+	
+<script>
+const fileInput = document.getElementById('file-input');
+const videos = document.querySelectorAll('video');
+const switchButton = document.getElementById('switchButton');
+var state='file'
+var source="test.mp4"
+
+videos.forEach(video => video.src = source);
+
+fileInput.addEventListener('change', () => {
+  const file = fileInput.files[0];
+  const fileURL = URL.createObjectURL(file);
+
+  for (let i = 0; i < videos.length; i++) {
+    videos[i].src = fileURL;
+    videos[i].load();
+	
+  }
+});
+
+const syncInterval = 10000; // set the sync interval to 10 seconds
+let lastSyncTime = Date.now();
+
+function switchVideo() {
+        if (state === 'file') {
+          // switch to stream source
+          navigator.mediaDevices.getDisplayMedia({ video: true })
+            .then(function(stream) {
+              // videoElement.srcObject = stream;
+              videos.forEach(video => video.src = undefined);
+
+              videos.forEach(video => video.srcObject = stream)
+              state = 'stream';
+              switchButton.textContent = 'Switch to Video File';
+            })
+            .catch(function(error) {
+              console.error('Error accessing media devices.', error);
+            });
+        } else {
+          // switch to file source
+          videos.forEach(video => video.srcObject = undefined)
+
+          videos.forEach(video => video.src = source);
+
+          // videoElement.src = 'test.mp4';
+          state="file";
+          switchButton.textContent = 'Switch to Video Stream';
+        }
+      }
+
+function syncVideos() {
+  const currentTime = videos[0].currentTime;
+  for (let i = 1; i < videos.length; i++) {
+    videos[i].currentTime = currentTime;
+  }
+  lastSyncTime = Date.now();
+}
+
+videos[0].addEventListener('play', () => {
+  // sync videos when the first video starts playing
+  syncVideos();
+  for (let i = 1; i < videos.length; i++) {
+	videos[i].play();
+  }
+});
+
+videos[0].addEventListener('pause', () => {
+  // sync videos when the first video starts playing
+  syncVideos();
+  for (let i = 1; i < videos.length; i++) {
+	videos[i].pause();
+  }
+});
+
+videos[0].addEventListener('seeked', () => {
+  // sync videos when the first video is seeked
+  syncVideos();
+});
+
+function checkElapsedTime() {
+  const elapsedTime = Date.now() - lastSyncTime;
+  if (elapsedTime >= syncInterval) {
+    // sync videos if the elapsed time is greater than the sync interval
+    syncVideos();
+  }
+  setTimeout(checkElapsedTime, 1000); // check elapsed time every second
+}
+
+checkElapsedTime();
+</script>
+
+	<script>
+    
+ 	function playAllVideos(event) {
+        if (event.keyCode === 80 || event.which === 80) {
+          var video = document.getElementById('master');
+  video.muted = false;
+			const videos = document.querySelectorAll('video');
+
+// Loop through all video elements and toggle play/pause
+videos.forEach((video) => {
+  if (video.paused) {
+
+	video.play();
+  pauseLabel.style.display = 'none';  
+  
+} else {
+	video.pause();
+  pauseLabel.style.display = 'block';  
+}
+});
+        }
+
+		if (event.code === 'KeyI') {
+    var pre = document.querySelector('pre');
+    pre.style.display = (pre.style.display === 'none') ? 'block' : 'none';
+	var form = document.querySelector('form');
+
+  fileInput.style.display = pre.style.display;
+  switchButton.style.display = pre.style.display;
+  }      }
+
+      document.addEventListener('keydown', playAllVideos);
+    </script>
+		
+
+</body>
+
+</html>
