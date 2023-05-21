@@ -1,10 +1,12 @@
+# Earth Day PC Setup
+
 ## Two Screens Synced
 
 1. Open your video file in your preferred media player.
 2. Open **index.html** file located in **Projection** folder on flash drive. A window should pop up showing a test screen and the following list of commands. The important ones are bold.
     
     ```markdown
-    **SHIFT-Space: Toggle edit mode**
+   **SHIFT-Space: Toggle edit mode**
     In Edit Mode
    **'s':                Show/Hide controls/buttons Solo/unsolo selected
     'p':                play/pause
@@ -22,10 +24,10 @@
     ```
     
 3. Drag the window onto the desired projector screen and make it full screen (press **F11**).
-4. Press ‘**SHIFT**’ + ‘**Space**’ to enter edit mode and drag the corners of the test screen to line up with your surface. 
-5. When finished dragging the corners, Press ‘**SHIFT**’ + ‘**Space**’ to exit edit mode.
-6. At the top left of the window click “**Select Input**” to share your media player window. When the popup asks what to share, choose ‘**Entire Screen**’ and Select your desktop with the media player (likely ‘Screen 1’).
-7. Hide the controls list and buttons (press ‘**S**’).
+4. At the top left of the window click “**Select Input**” to share your media player window. When the popup asks what to share, choose ‘**Entire Screen**’ and Select your desktop with the media player (likely ‘Screen 1’).
+5. Press ‘**SHIFT**’ + ‘**Space**’ to enter edit mode and drag the corners of the test screen to line up with your surface. 
+6. Hide the controls list and buttons (press ‘**S**’).
+7. When finished dragging the corners, Press ‘**SHIFT**’ + ‘**Space**’ to exit edit mode.
 8. Repeat steps 2-7 in a new chrome window on the second projector.
 9. Make the media player full screen on your laptop and click ‘**hide**’ on the screen sharing notification at the bottom of the screen.
 10. Play your video.
@@ -35,7 +37,7 @@
 1. Open index.html file located in Projection folder on flash drive. A window should pop up showing a test screen and the following list of commands. The important ones are bold.
     
     ```markdown
-    **SHIFT-Space: Toggle edit mode**
+   **SHIFT-Space: Toggle edit mode**
     In Edit Mode
    **'s':                Show/Hide controls/buttons Solo/unsolo selected
     'p':                play/pause
@@ -53,10 +55,10 @@
     ```
     
 2. Drag the window onto the desired projector screen and make it full screen (press **F11**).
-3. Press ‘**SHIFT**’ + ‘**Space**’ to enter edit mode and drag the corners of the test screen to line up with your surface. 
-4. When finished mapping, Press ‘**SHIFT**’ + ‘**Space**’ to exit edit mode.
-5. At the top left of the window click  “Choose File” to select a video file to play.
-6. Hide the controls list and buttons (press ‘**S**’).
+3. At the top left of the window click  “**Choose File**” to select a video file to play.
+4. Press ‘**SHIFT**’ + ‘**Space**’ to enter edit mode and drag the corners of the test screen to line up with your surface. 
+5. Hide the controls list and buttons (press ‘**S**’).
+6. When finished mapping, Press ‘**SHIFT**’ + ‘**Space**’ to exit edit mode.
 7. Press ‘**P**’ to play the video
 8. Repeat steps 1-6 in a new chrome window on the second projector.
 
