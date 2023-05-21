@@ -8,7 +8,7 @@
     ```markdown
     **SHIFT-Space: Toggle edit mode**
     In Edit Mode
-   **'s':                Show/Hide controls/buttons Solo/unsolo selected
+    **'s':                Show/Hide controls/buttons Solo/unsolo selected
     'p':                play/pause
     click / drag:       select and move quads/corner points**
     SHIFT + drag:       move selcted quad/corner point with 10x precision
@@ -30,7 +30,7 @@
 7. When finished dragging the corners, Press ‘**SHIFT**’ + ‘**Space**’ to exit edit mode.
 8. Repeat steps 2-7 in a new chrome window on the second projector.
 9. Make the media player full screen on your laptop and click ‘**hide**’ on the screen sharing notification at the bottom of the screen.
-10. Play your video.
+10. Play your video. Note: If video is backwards press ‘******H’****** to flip horizontally
 
 ## 1 or 2 Separate files
 
@@ -39,7 +39,7 @@
     ```markdown
     **SHIFT-Space: Toggle edit mode**
     In Edit Mode
-   **'s':                Show/Hide controls/buttons Solo/unsolo selected
+    **'s':                Show/Hide controls/buttons Solo/unsolo selected
     'p':                play/pause
     click / drag:       select and move quads/corner points**
     SHIFT + drag:       move selcted quad/corner point with 10x precision
@@ -59,7 +59,7 @@
 4. Press ‘**SHIFT**’ + ‘**Space**’ to enter edit mode and drag the corners of the test screen to line up with your surface. 
 5. Hide the controls list and buttons (press ‘**S**’).
 6. When finished mapping, Press ‘**SHIFT**’ + ‘**Space**’ to exit edit mode.
-7. Press ‘**P**’ to play the video
+7. Press ‘**P**’ to play the video. Note: If video is backwards press ‘******H’****** to flip horizontally
 8. Repeat steps 1-6 in a new chrome window on the second projector.
 
 Note: videos will play independently with their own audio. Right click the video surface and select ‘**show all controls’** to reveal playback and audio controls.
