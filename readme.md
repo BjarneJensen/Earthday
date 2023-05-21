@@ -8,7 +8,7 @@
     ```markdown
     **SHIFT-Space: Toggle edit mode**
     In Edit Mode
-    **'s':                Show/Hide controls/buttons Solo/unsolo selected
+   **'s':                Show/Hide controls/buttons Solo/unsolo selected
     'p':                play/pause
     click / drag:       select and move quads/corner points**
     SHIFT + drag:       move selcted quad/corner point with 10x precision
@@ -39,7 +39,7 @@
     ```markdown
     **SHIFT-Space: Toggle edit mode**
     In Edit Mode
-    **'s':                Show/Hide controls/buttons Solo/unsolo selected
+   **'s':                Show/Hide controls/buttons Solo/unsolo selected
     'p':                play/pause
     click / drag:       select and move quads/corner points**
     SHIFT + drag:       move selcted quad/corner point with 10x precision
