@@ -25,22 +25,21 @@ body{
   <div id="pauseLabel" class="pause-label" style="display: none;">Video Paused</div>
 
 	<pre tabindex=0 id="controls"  style="width:600px; height:250px; background:#404040;">
-SHIFT-Space: Toggle edit mode
-In Edit Mode
-'p':                play/pause 
-'i':                HIDE ME
-click / drag:       select and move quads/corner points
-SHIFT + drag:       move selcted quad/corner point with 10x precision
-ALT + drag:         rotate/scale selected quad
-Arrow keys:         move selected quad/corner point
-SHIFT + Arrow keys: move selected quad/corner point by 10 pixels
-ALT + Arrow keys:   rotate/scale selected 
-'s':                Solo/unsolo selected 
-'c':                Toggle crosshairs
-'r':                Rotate selected 90 degrees clock-wise
-'h':                Flip selected horizontally
-'v':                Flip selected vertically
-'b':                Show/Hide bounds
+    SHIFT-Space: Toggle edit mode
+    In Edit Mode
+    's':                Solo/unsolo selected &hide buttons
+    'p':                play/pause
+    click / drag:       select and move quads/corner points
+    SHIFT + drag:       move selcted quad/corner point with 10x precision
+    ALT + drag:         rotate/scale selected quad
+    Arrow keys:         move selected quad/corner point
+    SHIFT + Arrow keys: move selected quad/corner point by 10 pixels
+    ALT + Arrow keys:   rotate/scale selected 
+    'c':                Toggle crosshairs
+    'r':                Rotate selected 90 degrees clock-wise
+    'h':                Flip selected horizontally
+    'v':                Flip selected vertically
+    'b':                Show/Hide bounds
 	</pre>
   <!-- <video  muted autoplay width="500" muted height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video-test1"></video> -->
 
@@ -50,8 +49,7 @@ ALT + Arrow keys:   rotate/scale selected
 
   </script>
 	<script>
-		Maptastic("master");
-		Maptastic("controls");
+		Maptastic("master","controls");
 
 	</script>
 	
@@ -168,7 +166,7 @@ videos.forEach((video) => {
 });
         }
 
-		if (event.code === 'KeyI') {
+		if (event.code === 'KeyS') {
     var pre = document.querySelector('pre');
     pre.style.display = (pre.style.display === 'none') ? 'block' : 'none';
 	var form = document.querySelector('form');
